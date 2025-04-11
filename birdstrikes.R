@@ -708,8 +708,7 @@
              | (STATE == "WA" & SPECIES == "American goldfinch")
              | (STATE == "WV" & SPECIES == "Northern cardinal")
              | (STATE == "WI" & SPECIES == "American robin")
-             | (STATE == "WY" & SPECIES == "Western meadowlark")
-             ) %>%
+             | (STATE == "WY" & SPECIES == "Western meadowlark")) %>%
       group_by(STATE, SPECIES) %>%
       summarize(count = n()) %>%
       mutate(STATE = recode(STATE,
